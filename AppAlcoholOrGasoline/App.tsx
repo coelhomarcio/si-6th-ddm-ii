@@ -55,7 +55,7 @@ const App = () => {
 		return value !== null && !isNaN(Number(value)) && !isNaN(parseFloat(value)) && Number(value) > 0;
 	}
 
-	function twoNumbersProduct(): void {
+	function alcoholOrGasoline(): void {
 		isNumber(alcohol) ? setInput1BorderColor("#4CAF50") : setInput1BorderColor("#F44336");
 		isNumber(gasoline) ? setInput2BorderColor("#4CAF50") : setInput2BorderColor("#F44336");
 		if (isNumber(alcohol) && isNumber(gasoline))
@@ -124,7 +124,7 @@ const App = () => {
 							setGasoline(value.replace(",", "."));
 						} }
 					/>
-					<Pressable onPress={ () => twoNumbersProduct() }
+					<Pressable onPress={ () => alcoholOrGasoline() }
 					           style={ { ...styles.boxShadow, ...styles.button, backgroundColor: "#1976D2" } }>
 						<Text style={ styles.buttonText }>Calcular</Text>
 					</Pressable>
