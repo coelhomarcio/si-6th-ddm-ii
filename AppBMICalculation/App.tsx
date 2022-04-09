@@ -56,7 +56,7 @@ const App = () => {
 		return value !== null && !isNaN(Number(value)) && !isNaN(parseFloat(value)) && Number(value) > 0;
 	}
 
-	function twoNumbersProduct(): void {
+	function BMICalculation(): void {
 		isNumber(height) ? setInput1BorderColor("#4CAF50") : setInput1BorderColor("#F44336");
 		isNumber(weight) ? setInput2BorderColor("#4CAF50") : setInput2BorderColor("#F44336");
 		if (isNumber(height) && isNumber(weight))
@@ -125,7 +125,7 @@ const App = () => {
 							setWeight(value.replace(",", "."));
 						} }
 					/>
-					<Pressable onPress={ () => twoNumbersProduct() }
+					<Pressable onPress={ () => BMICalculation() }
 					           style={ { ...styles.boxShadow, ...styles.button, backgroundColor: "#1976D2" } }>
 						<Text style={ styles.buttonText }>Calcular</Text>
 					</Pressable>
