@@ -187,6 +187,7 @@ const App = () => {
 				} }>
 					<TextInput
 						placeholder="Informe uma tarefa"
+						placeholderTextColor={"#CCC"}
 						value={ taskInput }
 						onChangeText={ setTaskInput }
 						style={ {
