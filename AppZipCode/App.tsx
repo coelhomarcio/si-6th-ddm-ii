@@ -36,8 +36,8 @@ const App = () => {
 	};
 
 	return (
-		<SafeAreaView style={{ flex: 1 }}>
-			<View style={{ backgroundColor: "#F9F9F9", flex: 1 }}>
+		<SafeAreaView style={ { flex: 1 } }>
+			<View style={ { backgroundColor: "#F9F9F9", flex: 1 } }>
 				<View style={ {
 					paddingHorizontal: 16,
 					paddingVertical:   8,
@@ -69,8 +69,8 @@ const App = () => {
 				} }>
 					<TextInput
 						placeholder="Informe um CEP"
-						placeholderTextColor={"#CCC"}
-						keyboardType={"number-pad"}
+						placeholderTextColor={ "#CCC" }
+						keyboardType={ "number-pad" }
 						value={ input }
 						onChangeText={ setInput }
 						style={ {
