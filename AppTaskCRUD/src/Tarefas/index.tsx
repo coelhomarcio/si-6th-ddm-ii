@@ -1,16 +1,16 @@
-import * as React                                                                                from "react";
-import { ActivityIndicator, Button, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { Component, useEffect, useState }                                         from "react";
+import { View, Text, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator, Button } from "react-native";
+import api                                                                               from "../services/api";
+import Card                                                                              from "../components/Card";
 import {
 	useNavigation
-}                                                                                                from "@react-navigation/native";
-import api
-                                                                                                 from "../../service/api";
+}                                                                                        from "@react-navigation/native";
 
-const Task = () => {
-	const [tarefas, setTarefas] = React.useState([]);
-	const [loading, setLoading] = React.useState(true);
+export default function Tarefas() {
+	const [tarefas, setTarefas] = useState([]);
+	const [loading, setLoading] = useState(true);
 
-	React.useEffect(async () => {
+	useEffect(async () => {
 		await carregarTarefas();
 		setLoading(false);
 	}, []);
@@ -47,17 +47,7 @@ const Task = () => {
 			</View>
 		);
 	}
-	// return (
-	// 	<SafeAreaView style={ { flex: 1 } }>
-	// 		<View style={ { backgroundColor: "#F9F9F9", flex: 1 } }>
-	// 			<ScrollView>
-	//
-	//
-	// 			</ScrollView>
-	// 		</View>
-	// 	</SafeAreaView>
-	// );
-};
+}
 
 const styles = StyleSheet.create({
 	card:          {
@@ -98,5 +88,3 @@ const styles = StyleSheet.create({
 		marginBottom:    10
 	}
 });
-
-export default Task;
